@@ -94,7 +94,7 @@ public class KaraokeManager {
      * 播放
      */
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    void playback() {
+    private void playback() {
         int buffsize = AudioTrack.getMinBufferSize(44100, AudioFormat.CHANNEL_IN_STEREO, AudioFormat.ENCODING_PCM_16BIT);
         AudioTrack mAudioTrack = new AudioTrack(AudioManager.STREAM_MUSIC, 44100,
                 AudioFormat.CHANNEL_IN_STEREO, AudioFormat.ENCODING_PCM_16BIT, buffsize, AudioTrack.MODE_STREAM);
